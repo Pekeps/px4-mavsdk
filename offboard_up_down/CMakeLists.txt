@@ -16,7 +16,7 @@ target_link_libraries(offboard_up_down
 )
 
 if(NOT MSVC)
-    add_compile_options(connect_px4 PRIVATE -Wall -Wextra)
+    add_compile_options(offboard_up_down PRIVATE -Wall -Wextra)
 else()
-    add_compile_options(connect_px4 PRIVATE -W2)
+    add_compile_options(offboard_up_down PRIVATE -W2)
 endif()
