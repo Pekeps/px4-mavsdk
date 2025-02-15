@@ -38,3 +38,11 @@ chmod +x ./QGroundControl.AppImage
 cd /path/to/PX4-Autopilot
 make px4_sitl gz_x500
 ```
+
+# Building and running the program
+
+```sh
+cd offboard_up_down
+cmake -Bbuild -H.
+cmake --build build -j4
+build/offboard_up_down udpin://0.0.0.0:14540

@@ -48,9 +48,9 @@ int main(int argc, char** argv)
     }
     // System got discovered.
     auto system = mavsdk.systems().at(0);
-    auto telemetry = Telemetry{system};
-    auto action = Action{system};
-    auto offboard = Offboard{system};
+    Telemetry telemetry{system};
+    Action action{system};
+    Offboard offboard{system};
 
     std::cout << "Waiting for vehicle to be ready...\n";
     while (!telemetry.health_all_ok()) {
